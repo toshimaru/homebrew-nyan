@@ -16,4 +16,8 @@ class Nyan < Formula
   def install
     bin.install "nyan"
   end
+
+  test do
+    system "#{bin}/nyan -v"
+  end
 end
