@@ -5,21 +5,21 @@
 class Nyan < Formula
   desc "Colored cat command which supports syntax highlighting"
   homepage "https://github.com/toshimaru/nyan"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.0/nyan_Darwin_arm64.tar.gz"
-      sha256 "5553406d5bec2d49a3b950174debdf5ac0860303a59b702da4f8a5849a3a4ba2"
+    if Hardware::CPU.intel?
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.1/nyan_Darwin_x86_64.tar.gz"
+      sha256 "3ba0d5b11d76eae0c778913d602575919dc4963f9405a588704b094eb22cb002"
 
       def install
         bin.install "nyan"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.0/nyan_Darwin_x86_64.tar.gz"
-      sha256 "2c92c4b8fd0e66c083a6f373c991b89f114c2754ec4de51b83872ad95cd2bb52"
+    if Hardware::CPU.arm?
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.1/nyan_Darwin_arm64.tar.gz"
+      sha256 "cda4b8bafcfffa5b12928810f05aa255166c58d7cc7c53b5247f394ff56fe542"
 
       def install
         bin.install "nyan"
@@ -29,16 +29,16 @@ class Nyan < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.0/nyan_Linux_x86_64.tar.gz"
-      sha256 "62dd151df1ab7c8a47f275a30865a1a54dc1bc1fcb80dc2daa33041f05731509"
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.1/nyan_Linux_x86_64.tar.gz"
+      sha256 "c12f0b2cf7f5d850bc1d64771ba2d6d0302c6b72103be31e6b6310dd2ca3771d"
 
       def install
         bin.install "nyan"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.0/nyan_Linux_arm64.tar.gz"
-      sha256 "0912fe3c96cad69c8d8df3f0332fae88d54d8ec4d9486c58e1c7383ee3e379b1"
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.1/nyan_Linux_arm64.tar.gz"
+      sha256 "dbd19e92be084ab919d5d20adc796c268105c08906c081c000a4e76b6718c7be"
 
       def install
         bin.install "nyan"
