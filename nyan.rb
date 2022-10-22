@@ -5,21 +5,21 @@
 class Nyan < Formula
   desc "Colored cat command which supports syntax highlighting"
   homepage "https://github.com/toshimaru/nyan"
-  version "1.0.2"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.2/nyan_Darwin_x86_64.tar.gz"
-      sha256 "7cbf08eb1328ba089d3aa90df0e1840cd1cb848ffb855c65eb4141a0b0b3fcad"
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.3/nyan_Darwin_x86_64.tar.gz"
+      sha256 "a252d86d1a15508f3840309787e31815bf0604d2458461aab572fa4a0a12b5c4"
 
       def install
         bin.install "nyan"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.2/nyan_Darwin_arm64.tar.gz"
-      sha256 "1a1c946c6fa433c4ca488881bf4aa4fd0a42fbffbaf91494195a0bb4b290682a"
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.3/nyan_Darwin_arm64.tar.gz"
+      sha256 "a53f7872a516865aa92b2fa5bd5946dbb41367addb5bb51028feb8c3093d186d"
 
       def install
         bin.install "nyan"
@@ -29,16 +29,16 @@ class Nyan < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.2/nyan_Linux_arm64.tar.gz"
-      sha256 "0118d233a644aa8a37d01aaabfcca74d0d24c5da992fc4ff880566a533726790"
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.3/nyan_Linux_arm64.tar.gz"
+      sha256 "551299b0b92405eb5266d499fa72c042a1d2c6c278bcfd4d304dedd233727551"
 
       def install
         bin.install "nyan"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.2/nyan_Linux_x86_64.tar.gz"
-      sha256 "69d4e7b52bb02e5de8f67301672ebf1fb7c580a6ef2d0f97835b8f93f9793012"
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.3/nyan_Linux_x86_64.tar.gz"
+      sha256 "707a4baca2d0f04e740b47b5d2b963496ee66a6f19cc0c27cff6172cbcf9cc66"
 
       def install
         bin.install "nyan"
