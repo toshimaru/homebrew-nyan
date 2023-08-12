@@ -5,21 +5,21 @@
 class Nyan < Formula
   desc "Colored cat command which supports syntax highlighting"
   homepage "https://github.com/toshimaru/nyan"
-  version "1.0.5"
+  version "1.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.5/nyan_Darwin_x86_64.tar.gz"
-      sha256 "473edb32bb7a2f44d8dd9afa2bb4e5700ae19cb3fda9a154a42aab0634b7cbe9"
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.6/nyan_Darwin_amd64.tar.gz"
+      sha256 "e53ab516b74b4c1efc7fbadee8a044b3096afbb2f3344411aa808d6c372a73bc"
 
       def install
         bin.install "nyan"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.5/nyan_Darwin_arm64.tar.gz"
-      sha256 "85448c276d0f550c6ea7f2364f4f78079ef3607c26aa97728b70c02fc8ae75cb"
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.6/nyan_Darwin_arm64.tar.gz"
+      sha256 "908fc74017e5bfb74884c6c4110b61b1bcc0aea101e832c9bdc753a87147509d"
 
       def install
         bin.install "nyan"
@@ -29,16 +29,16 @@ class Nyan < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.5/nyan_Linux_arm64.tar.gz"
-      sha256 "3fc26731953ff8c9c59ac5ced335b3e49606bf65925ed7c1b94d554076509e47"
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.6/nyan_Linux_arm64.tar.gz"
+      sha256 "8e276f4643be8d241bd7650833cf91d5550331474459289ce2beca5e7172458f"
 
       def install
         bin.install "nyan"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.5/nyan_Linux_x86_64.tar.gz"
-      sha256 "17cab0c17364646dfdf08ad9236b1d666d881a82cab61a6abc46b3c85048db5a"
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.6/nyan_Linux_amd64.tar.gz"
+      sha256 "3320dee4883eff1c3a0e2d2b86c67458c86cf6947dc9ea2e38e7236d7d3d3753"
 
       def install
         bin.install "nyan"
