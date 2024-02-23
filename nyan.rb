@@ -5,21 +5,21 @@
 class Nyan < Formula
   desc "Colored cat command which supports syntax highlighting"
   homepage "https://github.com/toshimaru/nyan"
-  version "1.0.9"
+  version "1.0.10"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.9/nyan_Darwin_arm64.tar.gz"
-      sha256 "50b64f73bd01055bdcc1d094b96bc3a8e9ff89742bbae447003adf791743ec14"
+    if Hardware::CPU.intel?
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.10/nyan_Darwin_amd64.tar.gz"
+      sha256 "e23717b555c0e7ddcc15cbb3223a0000e1c557aa34deec5bfb7c7ddd9f4cfae6"
 
       def install
         bin.install "nyan"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.9/nyan_Darwin_amd64.tar.gz"
-      sha256 "496d68e056a6ac6bd1b8006c3c27eb5194c50cc85c2767d1351654b29756ea3c"
+    if Hardware::CPU.arm?
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.10/nyan_Darwin_arm64.tar.gz"
+      sha256 "9382551e8c2258cf4c2e446c69e7f32fad0ad5e2021d9c4e5d463c525fb7240c"
 
       def install
         bin.install "nyan"
@@ -28,17 +28,17 @@ class Nyan < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.9/nyan_Linux_amd64.tar.gz"
-      sha256 "bc028c9bc9e99349c71b2a3bfad4c51d21fe97af944381d8cbbc1003abd4ce92"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.10/nyan_Linux_arm64.tar.gz"
+      sha256 "9aaa870d03419f4749d48b80511157c062caccf5cce9687811f2b689789277ba"
 
       def install
         bin.install "nyan"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/toshimaru/nyan/releases/download/v1.0.9/nyan_Linux_arm64.tar.gz"
-      sha256 "d111f20981602248b33511cf15c5ef6944a25623e2f713341d5de8fe00799ca7"
+    if Hardware::CPU.intel?
+      url "https://github.com/toshimaru/nyan/releases/download/v1.0.10/nyan_Linux_amd64.tar.gz"
+      sha256 "c379d87e64dab859d62800a352300a24d860c8a212d035da0f85a8f8e3acfad6"
 
       def install
         bin.install "nyan"
