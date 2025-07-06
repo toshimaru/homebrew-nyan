@@ -2,7 +2,7 @@ name: Brew Check
 on: [push]
 jobs:
   build:
-    runs-on: macos-12
+    runs-on: macos-15
     steps:
     - uses: actions/checkout@v3
     - name: brew install/test
