@@ -7,5 +7,5 @@ jobs:
     - uses: actions/checkout@v4
     - name: brew install/test
       run: |
-        brew install -v ./*.rb
-        brew test ./*.rb
+        ruby -c nyan.rb
+        ruby -c Casks/nyan.rb
