@@ -3,7 +3,7 @@ cask "nyan" do
   name "nyan"
   desc "Colorizing `cat` command with syntax highlighting"
   homepage "https://github.com/toshimaru/nyan"
-  version "1.2.4"
+  version "1.2.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "nyan" do
   on_macos do
     on_intel do
       url "https://github.com/toshimaru/nyan/releases/download/v#{version}/nyan_Darwin_amd64.tar.gz"
-      sha256 "7ff08296342e3066121647171cf217065e6e8275bba95b477d37f2bea198b8ec"
+      sha256 "a899b1534503be9c33fb492c21d8f92aa438cc6863fa140d03f0d159ee892189"
     end
     on_arm do
       url "https://github.com/toshimaru/nyan/releases/download/v#{version}/nyan_Darwin_arm64.tar.gz"
-      sha256 "8909a1c2a23ef64b9022ee019cdb631a55634a2f7f4556bbc61921702b09f7d8"
+      sha256 "5b5eeb8dc3c028650b7347ca45a68a4d2a7b10c292246801d344e39c319d8927"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/toshimaru/nyan/releases/download/v#{version}/nyan_Linux_amd64.tar.gz"
-      sha256 "1f97959b91471dcce1bb2f34f1431e11ede7e0235bf969b8f3569d69ff57d35b"
+      sha256 "f94cccbc9697b7f455ec6f19d70a4949b52a64db3c7993134aaa7b73f00c8349"
     end
     on_arm do
       url "https://github.com/toshimaru/nyan/releases/download/v#{version}/nyan_Linux_arm64.tar.gz"
-      sha256 "702351c5c534eb490d69783bdb17b9e0926012020831ed50412c82e6b08b7096"
+      sha256 "552925b6a14879b447b9c00133d2b4477e3a7beb257cbc3ec34c9a823887f962"
     end
   end
 
